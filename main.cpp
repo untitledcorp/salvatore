@@ -54,5 +54,9 @@ int main() {
 
     extractIso(isoPath);
 
+    std::cout << "Press Enter to exit the program...\n";
+    std::cin.ignore(); 
+    std::cin.get();
+
     return 0;
 }
