@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <filesystem>
+#include "header\isohandler.h"
 
 int main() {
     std::string isoPath;
@@ -10,7 +11,7 @@ int main() {
     std::cout << R"(
                .__                __                        
   ___________  |  |___  _______ _/  |_  ___________   ____  
-/  ___/\\__  \\ |  |\\  \\/ /\\__  \\\\   __\\/  _ \\_  __ \\
+ /  ___/\__  \ |  |\  \/ /\__  \\   __\/  _ \_  __ \_/ __ \ 
  \___ \  / __ \|  |_\   /  / __ \|  | (  <_> )  | \/\  ___/ 
 /____  >(____  /____/\_/  (____  /__|  \____/|__|    \___  >
      \/      \/                \/                        \/
@@ -50,5 +51,8 @@ int main() {
     std::cout << "RAM: " << ramMB << " MB\n";
     std::cout << "CPU Cores: " << cpuCores << "\n";
     std::cout << "Booting...\n";
+
+    extractIso(isoPath);
+
     return 0;
 }
