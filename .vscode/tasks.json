@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build Salvatore",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-g",
+          "bootstrap.cpp",
+          "-o",
+          "salvatore"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  

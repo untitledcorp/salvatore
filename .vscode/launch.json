@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Run Salvatore",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/salvatore",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "gdb"
+      }
+    ]
+  }
+  
