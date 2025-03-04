@@ -1,1 +1,4 @@
 *.exe
+*.iso
+iso
+cpudmp/logs.txt

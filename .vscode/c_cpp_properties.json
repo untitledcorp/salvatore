@@ -1,24 +1,25 @@
 {
-    "configurations": [
-      {
-        "name": "Win32",
-        "includePath": [
-          "${workspaceFolder}/**",
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/header",
+        "C:/msys64/mingw64/include"
+      ],
+      "defines": [],
+      "intelliSenseMode": "gcc-x86",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "${workspaceFolder}/header",
           "C:/msys64/mingw64/include"
         ],
-        "defines": [],
-        "intelliSenseMode": "gcc-x86",
-        "cStandard": "c11",
-        "cppStandard": "c++17",
-        "browse": {
-          "path": [
-            "${workspaceFolder}",
-            "C:/msys64/mingw64/include"
-          ],
-          "limitSymbolsToIncludedHeaders": true
-        }
+        "limitSymbolsToIncludedHeaders": true
       }
-    ],
-    "version": 4
-  }
-  
+    }
+  ],
+  "version": 4
+}

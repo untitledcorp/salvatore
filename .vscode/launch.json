@@ -5,7 +5,7 @@
         "name": "Run Salvatore",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/salvatore",
+        "program": "${workspaceFolder}/main.cpp",
         "args": [],
         "cwd": "${workspaceFolder}",
         "environment": [],

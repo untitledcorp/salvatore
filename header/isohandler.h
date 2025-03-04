@@ -1,8 +1,12 @@
-#ifndef ISOHANDLER_H
-#define ISOHANDLER_H
-
+#pragma once
 #include <string>
 
-void extractIso(const std::string &isoPath);
+class IsoHandler {
+public:
+    IsoHandler(const std::string& path);
+    bool isValidIso();
+    std::string getBootSector();
 
-#endif
+private:
+    std::string isoPath;
+};
