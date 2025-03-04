@@ -3,12 +3,17 @@
 **Salvatore** (*SAHL-vah-tor-eh*, named after the [Swiss mountain](https://en.wikipedia.org/wiki/Monte_San_Salvatore)) is a open-source virtualization software.
 
 # Get Started
-To get started, all you need is G++. 
-If you're on Windows, you need [MSYS2](https://www.msys2.org).
-If you're on Linux, it should already be installed. If not, run `sudo apt install g++`.
-If you're on macOS, it should be installed alongside the **Xcode Command Line Tools**. No libraries are needed to be installed, as they are in the `lib/` folder.
+To get started, all you need is **G++**. 
+- If you're on Windows, you need [MSYS2](https://www.msys2.org).
+
+- If you're on Linux, it should already be installed. If not, run ```sudo apt install g++```.
+
+- If you're on macOS, it should be installed alongside the **Xcode Command Line Tools**.
+
+No libraries are needed to be installed, as they are in the `lib/` folder.
 
 Next, download the repository, and compile it with:
-`g++ -o salvatore main.cpp cpu.cpp ram.cpp isohandler.cpp debug.cpp -std=c++17`. 
+```g++ -o salvatore main.cpp cpu.cpp ram.cpp isohandler.cpp debug.cpp -std=c++17```.
+
 An **.exe** file will show up in the directory. Open it to ensure everything is fine.
 wip readme 😵‍💫
