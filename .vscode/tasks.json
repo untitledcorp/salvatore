@@ -1,21 +1,24 @@
 {
-    "version": "2.0.0",
-    "tasks": [
+  "version": "2.0.0",
+  "tasks": [
       {
-        "label": "Build Salvatore",
-        "type": "shell",
-        "command": "g++",
-        "args": [
-          "-g",
-          "main.cpp",
-          "-o",
-          "salvatore"
-        ],
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        }
+          "label": "Build Salvatore",
+          "type": "shell",
+          "command": "g++",
+          "args": [
+              "main.cpp",
+              "parsing.cpp",
+              "datareader.cpp",
+              "filesystem.cpp",
+              "bootloader.cpp",
+              "-o",
+              "salvatore"
+          ],
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "problemMatcher": ["$gcc"]
       }
-    ]
-  }
-  
+  ]
+}

@@ -1,17 +1,18 @@
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
       {
-        "name": "Run Salvatore",
-        "type": "cppdbg",
-        "request": "launch",
-        "program": "${workspaceFolder}/main.cpp",
-        "args": [],
-        "cwd": "${workspaceFolder}",
-        "environment": [],
-        "externalConsole": true,
-        "MIMode": "gdb"
+          "name": "Build Salvatore",
+          "type": "cppdbg",
+          "request": "launch",
+          "program": "${workspaceFolder}/salvatore",
+          "args": [],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": true,
+          "preLaunchTask": "Build Salvatore",
+          "MIMode": "gdb"
       }
-    ]
-  }
-  
+  ]
+}
