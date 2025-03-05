@@ -13,7 +13,9 @@ To get started, all you need is **G++**.
 No libraries are needed to be installed, as they are in the `lib/` folder.
 
 Next, download the repository, and compile it with:
-```g++ -o salvatore main.cpp cpu.cpp ram.cpp isohandler.cpp debug.cpp -std=c++17```.
+
+```g++ -o salvatore main.cpp parser.cpp datareader.cpp isohandler.cpp debug.cpp -o
+./salvatore```.
 
 An **.exe** file will show up in the directory. Open it to ensure everything is fine.
 wip readme 😵‍💫
