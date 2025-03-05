@@ -14,8 +14,13 @@ No libraries are needed to be installed, as they are in the `lib/` folder.
 
 Next, download the repository, and compile it with:
 
-```g++ -o salvatore main.cpp parser.cpp datareader.cpp -o```
+```g++ main.cpp parsing.cpp datareader.cpp filesystem.cpp bootloader.cpp -o salvatore```
+
+Then:
+
 ```./salvatore```
 
 An **.exe** file will show up in the directory. Open it to ensure everything is fine.
+
+
 wip readme 😵‍💫

@@ -7,7 +7,7 @@
         "command": "g++",
         "args": [
           "-g",
-          "bootstrap.cpp",
+          "main.cpp",
           "-o",
           "salvatore"
         ],
