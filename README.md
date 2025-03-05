@@ -14,7 +14,7 @@ No libraries are needed to be installed, as they are in the `lib/` folder.
 
 Next, download the repository, and compile it with:
 
-```g++ -o salvatore main.cpp parser.cpp datareader.cpp isohandler.cpp debug.cpp -o```
+```g++ -o salvatore main.cpp parser.cpp datareader.cpp -o```
 ```./salvatore```
 
 An **.exe** file will show up in the directory. Open it to ensure everything is fine.
