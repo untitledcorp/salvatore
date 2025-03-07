@@ -7,7 +7,7 @@
 
 int main() {
     try {
-        size_t ramSize = 4 * 1024 * 1024; // 4mb
+        size_t ramSize = 1024 * 1024 * 1024; // 1gb
 
         Allocation ram(ramSize);
 
