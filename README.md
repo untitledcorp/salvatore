@@ -29,9 +29,9 @@ Salvatore currently does not have a documentation explaining how the software wo
 
 To get started, all you need is **G++**. 
 
-- If you're on Windows, you need [MSYS2](https://www.msys2.org).
+- If you're on Windows, you need **[MSYS2](https://www.msys2.org)**.
 
-- If you're on Linux, it should already be installed. If not, run ```sudo apt install g++```.
+- If you're on Linux, it should already be installed. If not, run `sudo apt install g++`.
 
 - If you're on macOS, it should be installed alongside the **Xcode Command Line Tools**.
 
