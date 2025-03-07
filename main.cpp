@@ -3,9 +3,16 @@
 #include "header/VirtualMachine.h"
 #include "header/bootloader.h"
 #include "header/filesystem.h"
+#include "header/allocation.h"
 
 int main() {
     try {
+        size_t ramSize = 8 * 1024 * 1024; // 8MB
+
+        Allocation ram(ramSize);
+
+        std::cout << "Allocated " << ram.getSize() / (1024 * 1024) << " MB of RAM." << std::endl;
+        
         std::string isoPath = "C:/Users/swag/Desktop/Virtual Machines/archlinux-2025.03.01-x86_64.iso";
         
         Bootloader bootloader(isoPath);

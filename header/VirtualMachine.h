@@ -6,12 +6,12 @@
 
 class VirtualMachine {
 public:
-    VirtualMachine();  // Constructor to initialize the VM with simulated RAM
-    void loadKernel(const std::vector<uint8_t>& kernelData);  // Function to load the kernel into memory
-    void executeKernel();  // Function to simulate the execution of the kernel
+    VirtualMachine();
+    void loadKernel(const std::vector<uint8_t>& kernelData);
+    void executeKernel();
 
 private:
-    std::vector<uint8_t> memory;  // Simulated RAM for the virtual machine
+    std::vector<uint8_t> memory;
 };
 
-#endif // VIRTUALMACHINE_H
+#endif 
