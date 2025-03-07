@@ -45,7 +45,7 @@ No additional libraries are required as they are included in the `lib/` folder.
     ./salvatore
     ```
 
-An **.exe** file will be created in the directory. Salvatore is now compiled and ready to use!
+An **.exe** file will be created in the directory. Salvatore is now compiled and ready to use.
 
 # Reporting Issues
 
