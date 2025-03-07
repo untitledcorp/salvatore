@@ -7,13 +7,13 @@
 
 int main() {
     try {
-        size_t ramSize = 4 * 1024 * 1024; // 8gb
+        size_t ramSize = 4 * 1024 * 1024; // 4mb
 
         Allocation ram(ramSize);
 
         std::cout << "Allocated " << ram.getSize() / (1024 * 1024) << " MB of RAM." << std::endl;
         
-        std::string isoPath = "C:/Users/swag/Desktop/Virtual Machines/archlinux-2025.03.01-x86_64.iso";
+        std::string isoPath = "iso/archlinux-2025.03.01-x86_64.iso";
         
         Bootloader bootloader(isoPath);
         
