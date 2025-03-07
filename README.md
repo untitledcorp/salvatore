@@ -1,4 +1,5 @@
 ![Salvatore](https://github.com/user-attachments/assets/f449310f-6128-4213-83a9-8b2cdfd6d326)
+![GitHub last commit](https://img.shields.io/github/last-commit/notzekkie/salvatore)  ![GitHub contributors](https://img.shields.io/github/contributors/notzekkie/salvatore)  ![GitHub language count](https://img.shields.io/github/languages/count/notzekkie/salvatore)  ![GitHub top language](https://img.shields.io/github/languages/top/notzekkie/salvatore)  ![GitHub License](https://img.shields.io/github/license/notzekkie/salvatore)  ![GitHub Release](https://img.shields.io/github/v/release/notzekkie/salvatore)  ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/notzekkie/salvatore)  ![GitHub repo size](https://img.shields.io/github/repo-size/notzekkie/salvatore)  ![Current Stage](https://img.shields.io/badge/current_stage-in_early_development-blue)
 
 **Salvatore** (*SAHL-vah-tor-eh*, named after the [Swiss mountain](https://en.wikipedia.org/wiki/Monte_San_Salvatore)) is a open-source virtualization software.
 
