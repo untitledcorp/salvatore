@@ -1,66 +1,66 @@
 ![Salvatore](https://github.com/user-attachments/assets/f449310f-6128-4213-83a9-8b2cdfd6d326)
-![GitHub last commit](https://img.shields.io/github/last-commit/notzekkie/salvatore)  ![GitHub contributors](https://img.shields.io/github/contributors/notzekkie/salvatore)  ![GitHub language count](https://img.shields.io/github/languages/count/notzekkie/salvatore)  ![GitHub top language](https://img.shields.io/github/languages/top/notzekkie/salvatore)  ![GitHub License](https://img.shields.io/github/license/notzekkie/salvatore)  ![GitHub Release](https://img.shields.io/github/v/release/notzekkie/salvatore)  ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/notzekkie/salvatore)  ![GitHub repo size](https://img.shields.io/github/repo-size/notzekkie/salvatore)  ![Current Stage](https://img.shields.io/badge/current_stage-in_early_development-blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/notzekkie/salvatore)   ![GitHub contributors](https://img.shields.io/github/contributors/notzekkie/salvatore)  ![GitHub language count](https://img.shields.io/github/languages/count/notzekkie/salvatore)  ![GitHub top language](https://img.shields.io/github/languages/top/notzekkie/salvatore)  ![GitHub License](https://img.shields.io/github/license/notzekkie/salvatore)  ![GitHub Release](https://img.shields.io/github/v/release/notzekkie/salvatore)  ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/notzekkie/salvatore)  ![GitHub repo size](https://img.shields.io/github/repo-size/notzekkie/salvatore)  ![Current Stage](https://img.shields.io/badge/current_stage-in_early_development-blue)
 
-**Salvatore** (*SAHL-vah-tor-eh*, named after the [Swiss mountain](https://en.wikipedia.org/wiki/Monte_San_Salvatore)) is a open-source virtualization software.
+**Salvatore** (*SAHL-vah-tor-eh*, named after the [Swiss mountain](https://en.wikipedia.org/wiki/Monte_San_Salvatore)) is an open-source virtualization software.
 
 # Documentation
 
-Salvatore currently does not have a documentation explaining how the software works, but you can check back later!
+Salvatore currently does not have detailed documentation explaining how the software works. Please check back later!
 
-> [!NOTE]
-> You could help out with the documentation, but Salvatore is in a very early state, so it's not the best idea for now.
+> [!Note]  
+> You can contribute to the documentation once the project stabilizes. However, it is still in early development, so it's better to wait for more features to be implemented.
 
-# To-do list
+# To-do List
 
-> [!TIP]
-> If you think there's anything missing here, let us know! Make an issue in our [tracker](https://github.com/notzekkie/salvatore/issues) and we'll see if we can add it.
+> [!Tip]  
+> If you think anything is missing here, feel free to [create an issue](https://github.com/notzekkie/salvatore/issues), and we'll review it!
 
-- Finish the bootloader
+- Finish the bootloader functionality to load and execute operating systems
 - Implement RAM allocation and CPU emulation
-- Make Arch Linux fully bootable (or any other non GUI operating system)
-- Make full CLI application
-- (*Saved for later*) Make a GUI version of the application
-
-
+- Make Arch Linux fully bootable (or any other non-GUI operating system)
+- Create a full CLI application
+- (*Saved for later*) Develop a GUI version of the application
 
 # Get Started
 
-> [!WARNING]
-> This application is currently **untested on macOS and Linux**. Development has, at the moment, only been done on **Windows**. 
+> [!Warning]  
+> This application is currently **untested on macOS and Linux**. Development has primarily been done on **Windows**.
 
-To get started, all you need is **G++**. 
+To get started, you will need **G++**:
 
-- If you're on Windows, you need **[MSYS2](https://www.msys2.org)**.
+- **Windows**: Install [MSYS2](https://www.msys2.org).
+- **Linux**: Install G++ by running `sudo apt install g++`.
+- **macOS**: G++ is installed with **Xcode Command Line Tools**.
 
-- If you're on Linux, it should already be installed. If not, run `sudo apt install g++`.
+No additional libraries are required as they are included in the `lib/` folder.
 
-- If you're on macOS, it should be installed alongside the **Xcode Command Line Tools**.
+1. Download the repository and compile it with:
 
-No libraries are needed to be installed, as they are in the `lib/` folder.
+    ```sh
+    g++ main.cpp parsing.cpp datareader.cpp filesystem.cpp bootloader.cpp -o salvatore
+    ```
 
-Next, download the repository, and compile it with:
+2. Then run:
 
-```sh
-g++ main.cpp parsing.cpp datareader.cpp filesystem.cpp bootloader.cpp -o salvatore
-```
+    ```sh
+    ./salvatore
+    ```
 
-Then:
-
-```sh
-./salvatore
-```
-
-An **.exe** file will show up in the directory. Salvatore is now compiled.
+An **.exe** file will be created in the directory. Salvatore is now compiled and ready to use!
 
 # Reporting Issues
 
-[First thing first](https://open.spotify.com/album/54z1IV2vazAiNZoXEPpXfJ), ensure that the issue you're reporting **isn't** already reported in the repository's [issue tracker](https://github.com/notzekkie/salvatore/issues). 
+Before reporting an issue, make sure it hasn't already been reported in the [issue tracker](https://github.com/notzekkie/salvatore/issues).
 
-When reporting issues, please provide as much useful information as you can. This can include:
+When reporting an issue, please provide as much relevant information as possible:
 
-- The version of Salvatore you are running
-- Steps to reproduce your problem.
-- An error message, if there is one (in the UI and on the console)
-- A fix/solution.
+- The version of Salvatore you're running
+- Steps to reproduce the issue
+- Any error messages or logs (both UI and console)
+- Possible fixes or solutions
 
-If you forget about something important, we'll probably ask.
+If you forget something, we'll ask for it later.
+
+# Contributing
+
+Feel free to fork the repository, make changes, and submit a pull request. Contributions are always welcome!
