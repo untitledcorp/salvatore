@@ -11,7 +11,7 @@ public:
     BIOS(const std::string& isoPath) {
         isoFile.open(isoPath, std::ios::binary);
         if (!isoFile.is_open()) {
-            throw std::runtime_error("Failed to open ISO file");
+            throw std::runtime_error("Failed to open ISO file.");
         }
     }
 
@@ -20,7 +20,7 @@ public:
         isoFile.seekg(0, std::ios::beg);
         isoFile.read(reinterpret_cast<char*>(sector.data()), 512);
         if (isoFile.gcount() != 512) {
-            throw std::runtime_error("Failed to read boot sector");
+            throw std::runtime_error("Failed to read boot sector.");
         }
         return sector;
     }
@@ -67,7 +67,7 @@ public:
 
     void executeKernel() {
         std::cout << "Jumping to kernel at memory address 0x10000..." << std::endl;
-        std::cout << "I'm over here" << std::endl;
+        std::cout << "Haiiiii >_< :333 (kernel is active btw)" << std::endl;
 
         for (size_t i = 0; i < 64; ++i) {
             printf("%02X ", memory[0x10000 + i]);
