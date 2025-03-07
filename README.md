@@ -15,11 +15,10 @@ Salvatore currently does not have detailed documentation explaining how the soft
 > [!Tip]  
 > If you think anything is missing here, feel free to [create an issue](https://github.com/notzekkie/salvatore/issues), and we'll review it!
 
-- Finish the bootloader functionality to load and execute operating systems
-- Implement RAM allocation and CPU emulation
-- Make Arch Linux fully bootable (or any other non-GUI operating system)
-- Create a full CLI application
-- (*Saved for later*) Develop a GUI version of the application
+- CPU Emulation
+- Bootloader finished
+- BIOS services
+- Virtual devices
 
 # Get Started
 
