@@ -6,7 +6,26 @@
 
 Salvatore currently does not have a documentation explaining how the software works, but you can check back later!
 
+> [!NOTE]
+> You could help out with the documentation, but Salvatore is in a very early state, so it's not the best idea for now.
+
+# To-do list
+
+> [!TIP]
+> If you think there's anything missing here, let us know! Make an issue in our [tracker](https://github.com/notzekkie/salvatore/issues) and we'll see if we can add it.
+
+- Finish the bootloader
+- Implement RAM allocation and CPU emulation
+- Make Arch Linux fully bootable (or any other non GUI operating system)
+- Make full CLI application
+- (*Saved for later*) Make a GUI version of the application
+
+
+
 # Get Started
+
+> [!WARNING]
+> This application is currently **untested on macOS and Linux**. Development has, at the moment, only been done on **Windows**. 
 
 To get started, all you need is **G++**. 
 
