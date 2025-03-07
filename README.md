@@ -36,7 +36,7 @@ No additional libraries are required as they are included in the `lib/` folder.
 1. Download the repository and compile it with:
 
     ```sh
-    g++ main.cpp parsing.cpp datareader.cpp filesystem.cpp bootloader.cpp -o salvatore
+    g++ main.cpp BIOS.cpp parsing.cpp datareader.cpp filesystem.cpp bootloader.cpp VirtualMachine.cpp allocation.cpp -o salvatore
     ```
 
 2. Then run:
