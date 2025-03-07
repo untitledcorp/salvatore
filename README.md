@@ -15,11 +15,10 @@ Salvatore currently does not have detailed documentation explaining how the soft
 > [!Tip]  
 > If you think anything is missing here, feel free to [create an issue](https://github.com/notzekkie/salvatore/issues), and we'll review it!
 
-- Finish the bootloader functionality to load and execute operating systems
-- Implement RAM allocation and CPU emulation
-- Make Arch Linux fully bootable (or any other non-GUI operating system)
-- Create a full CLI application
-- (*Saved for later*) Develop a GUI version of the application
+- CPU Emulation
+- Bootloader finished
+- BIOS services
+- Virtual devices
 
 # Get Started
 
@@ -37,7 +36,7 @@ No additional libraries are required as they are included in the `lib/` folder.
 1. Download the repository and compile it with:
 
     ```sh
-    g++ main.cpp BIOS.cpp parsing.cpp datareader.cpp filesystem.cpp bootloader.cpp VirtualMachine.cpp allocation.cpp cpu.cpp sample.cpp -o salvatore
+    g++ main.cpp BIOS.cpp BIOS.cpp parsing.cpp datareader.cpp filesystem.cpp bootloader.cpp VirtualMachine.cpp allocation.cpp VirtualMachine.cpp allocation.cpp cpu.cpp sample.cpp -o salvatore
     ```
 
 2. Then run:
