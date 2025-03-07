@@ -14,6 +14,7 @@ public:
     bool validateMBR(const std::vector<uint8_t>& sector);
     void loadKernel();
     void jumpToKernel();
+    void loadKernel(size_t kernelOffset, size_t kernelSize);
 
 private:
     void kernelEntry();

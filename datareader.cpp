@@ -16,7 +16,8 @@ std::vector<uint8_t> DataReader::readPartitionData(uint32_t startLBA, uint32_t s
 
     isoFile.seekg(startLBA * 512, std::ios::beg);
 
-    // ts datareader pmo he got a small ahh dih 💔✌️🥀
+    // ts datareader pmo
+    // its commented out because it keeps going on for infinity we do NOT need dat
     // isoFile.read(reinterpret_cast<char*>(buffer.data()), totalBytes);
     // if (isoFile.gcount() != totalBytes) {
     //     throw std::runtime_error("Failed to read partition data");

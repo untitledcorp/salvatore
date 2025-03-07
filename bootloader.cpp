@@ -30,11 +30,15 @@ bool Bootloader::validateMBR(const std::vector<uint8_t>& sector) {
     return (sector[510] == 0x55 && sector[511] == 0xAA);
 }
 
-void Bootloader::loadKernel() {
-    std::cout << "Loading kernel..." << std::endl;
-    kernelData.resize(1024 * 1024); // 1mb kernel
-    std::memset(kernelData.data(), 0x00, kernelData.size());
+void Bootloader::loadKernel(size_t kernelOffset, size_t kernelSize) {
+    std::cout << "Loading kernel from offset " << kernelOffset << " with size " << kernelSize << "..." << std::endl;
+    isoFile.seekg(kernelOffset, std::ios::beg);
+    isoFile.read(reinterpret_cast<char*>(kernelData.data()), kernelSize);
+    if (isoFile.gcount() != kernelSize) {
+        throw std::runtime_error("Failed to read kernel data");
+    }
 }
+
 
 void Bootloader::jumpToKernel() {
     std::cout << "Jumping to kernel..." << std::endl;
