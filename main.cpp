@@ -4,16 +4,19 @@
 #include "header/bootloader.h"
 #include "header/filesystem.h"
 #include "header/allocation.h"
+#include "header/cpu.h"
+
+const std::string kIsoPath = "iso/archlinux-2025.03.01-x86_64.iso";
 
 int main() {
     try {
-        size_t ramSize = 1024 * 1024 * 1024; // 1gb
+        size_t ramSize = 1024 * 1024 * 1024; // 1GB of RAM (1024 * 1024 * 1024 bytes)
 
         Allocation ram(ramSize);
 
         std::cout << "Allocated " << ram.getSize() / (1024 * 1024) << " MB of RAM." << std::endl;
         
-        std::string isoPath = "iso/archlinux-2025.03.01-x86_64.iso";
+        std::string isoPath = kIsoPath;
         
         Bootloader bootloader(isoPath);
         
@@ -25,15 +28,22 @@ int main() {
             return 1;
         }
         
-        size_t kernelOffset = 0x1000;
-        size_t kernelSize = 1024 * 1024;
+        size_t kernelOffset = 0x1000; // Offset for kernel loading
+        size_t kernelSize = 1024 * 1024; // Size of the kernel
         bootloader.loadKernel(kernelOffset, kernelSize);
 
         bootloader.jumpToKernel();
 
-        VirtualMachine vm;
-        vm.loadKernel(bootSector);
-        vm.executeKernel();
+        ARM32Emulator cpu(1024);
+
+        // Sample ARM32 instructions
+        std::vector<uint32_t> program = {
+            0xE0800002,
+            0xE0801003
+        };
+
+        cpu.loadProgram(program);
+        cpu.execute();
 
         ISO9660Filesystem isoFilesystem(bootSector);
         isoFilesystem.detectFilesystem();
