@@ -15,9 +15,9 @@ void ISO9660Filesystem::detectFilesystem() {
 void ISO9660Filesystem::parse() {
     std::cout << "Parsing ISO9660 filesystem..." << std::endl;
 }
+
 FAT32Filesystem::FAT32Filesystem(const std::vector<uint8_t>& partitionData)
     : data(partitionData) {}
-FAT32Filesystem::FAT32Filesystem(const std::vector<uint8_t>& partitionData) : data(partitionData) {}
 
 void FAT32Filesystem::detectFilesystem() {
     if (data.size() > 0x37 && data[0x36] == 0x55 && data[0x37] == 0xAA) {
