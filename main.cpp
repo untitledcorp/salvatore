@@ -5,31 +5,38 @@
 #include "header/filesystem.h"
 #include "header/allocation.h"
 #include "header/cpu.h"
+#include "header/vgadriver.h"
 
 const std::string kIsoPath = "iso/archlinux-2025.03.01-x86_64.iso";
 
 int main() {
     try {
-        size_t ramSize = 1024 * 1024 * 1024; // 1GB of RAM (1024 * 1024 * 1024 bytes)
+        vga_clear_screen();
 
+        vga_print("Starting virtual machine...\n");
+
+        size_t ramSize = 1024 * 1024 * 1024; // 1GB of RAM (1024 * 1024 * 1024 bytes)
+ 
         Allocation ram(ramSize);
 
-        std::cout << "Allocated " << ram.getSize() / (1024 * 1024) << " MB of RAM." << std::endl;
-        
+        std::string ramMessage = "Allocated " + std::to_string(ram.getSize() / (1024 * 1024)) + " MB of RAM.";
+        vga_print(ramMessage.c_str());
+        vga_print("\n");
+
         std::string isoPath = kIsoPath;
         
         Bootloader bootloader(isoPath);
         
         auto bootSector = bootloader.readBootSector();
-        std::cout << "Boot sector loaded." << std::endl;
+        vga_print("Boot sector loaded.\n");
 
         if (!bootloader.validateMBR(bootSector)) {
-            std::cerr << "Invalid MBR or boot sector." << std::endl;
+            vga_print("Invalid MBR or boot sector.\n");
             return 1;
         }
         
-        size_t kernelOffset = 0x1000; // Offset for kernel loading
-        size_t kernelSize = 1024 * 1024; // Size of the kernel
+        size_t kernelOffset = 0x1000;
+        size_t kernelSize = 1024 * 1024;
         bootloader.loadKernel(kernelOffset, kernelSize);
 
         bootloader.jumpToKernel();
@@ -54,7 +61,9 @@ int main() {
         fat32Filesystem.parse();
 
     } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
+        vga_print("Error: ");
+        vga_print(e.what());
+        vga_print("\n");
         return 1;
     }
 

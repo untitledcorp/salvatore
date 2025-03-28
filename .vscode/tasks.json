@@ -15,6 +15,7 @@
                 "filesystem.cpp",
                 "main.cpp",
                 "parsing.cpp",
+                "vgadriver.cpp",
                 "-o",
                 "salvatore"
             ],
